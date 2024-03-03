@@ -1,0 +1,19 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "backdrop-filter",
+          "rotate",
+          "translate"
+        ]
+      }
+    ],
+    "no-inline-styles": "off",
+    "button-type": "off"
+  }
+}

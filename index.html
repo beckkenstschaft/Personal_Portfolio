@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="icon" href="profile.png" type="image/x-icon">
+    <title>Portfolio | Syed Amaan Hasan</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <button id="scrollTopButton" onclick="scrollToTop()">
+            Top <i class="uil uil-arrow-circle-up"></i>
+        </button>
+
+        <!-- HEADER -->
+        <nav id="header">
+            <div class="nav-logo">
+                <p class="nav-name">Hasan</p>
+                <span>.</span>
+            </div>
+
+            <div class="nav-menu" id="myNavMenu">
+                <ul class="nav_menu_list">
+                    <li class="nav_list">
+                        <a href="#home" class="nav-link active-link">Home</a>
+                        <div class="circle"></div>
+                    </li>
+
+                    <li class="nav_list">
+                        <a href="#about" class="nav-link">about</a>
+                        <div class="circle"></div>
+                    </li>
+
+                    <li class="nav_list">
+                        <a href="#projects" class="nav-link">Projects</a>
+                        <div class="circle"></div>
+                    </li>
+
+                    <li class="nav_list">
+                        <a href="#contact" class="nav-link">Contact</a>
+                        <div class="circle"></div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav-button">
+                <button class="btn linkedin-btn"  id="linkedin-btn">
+                    Linkedin <i class="uil uil-linkedin-alt"></i>
+                </button>
+            </div>
+
+            <div class="nav-menu-btn">
+                <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+            </div>
+
+        </nav>
+
+        <!-- MAIN -->
+        <main class="wrapper">
+
+            <!-- FEATURED -->
+            <section class="featured-box" id="home">
+                <div class="featured-text">
+
+                    <div class="featured-text-card">
+                        <span>Syed Amaan Hasan</span>
+                    </div>
+
+                    <div class="featured-name">
+                        <p>
+                            I'm <span class="typedtext">Developer</span>
+                        </p>
+                    </div>
+
+                    <div class="featured-text-info">
+                        <p>
+                            Experienced Software Developer with a passion
+                            for developing cutting edge applications
+                        </p>
+                    </div>
+
+                    <div class="featured-text-btn">
+
+                        <button class="btn blue-btn" id="check-repo">
+                            Check repository <i class="uil uil-github-alt"></i>
+                        </button>
+
+                        <button class="btn" id="resume">
+                            Resume <i class="uil uil-link"></i>
+                        </button>
+
+                    </div>
+                    <!-- <div class="social_icons">
+                        <div class="icons">
+                            <i class="uil uil-instagram"></i>
+                        </div>
+                        
+                        <div class="icons">
+                            <i class="uil uil-linkedin-alt" id="linked-in"></i>
+                        </div>
+                        
+                        <div class="icons">
+                            <i class="uil uil-github-alt" id="check-repo-II"></i>
+                        </div>
+                    </div> -->
+                </div>
+
+                <div class="featured-image">
+
+                    <div class="image">
+                        <img src="profile2.png" alt="Profile image">
+                    </div>
+                </div>
+
+                <div class="scroll-icon-box">
+                    <a href="#about" class="scroll-btn">
+                        <i class="uil uil-mouse-alt"></i>
+                        <p>Scroll Down</p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- ABOUT -->
+            <section class="section" id="about">
+                <div class="top-header">
+                    <h1>About Me</h1>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="about-info">
+                            <h3>My introduction</h3>
+                            <p>I'm a driven Computer Science and Engineering
+                                student at Graphic Era Deemed University,
+                                equipped with a versatile skill set covering
+                                Python, Java, C/C++, HTML5, CSS3, JavaScript,
+                                Data Structures, Algorithms, and Machine
+                                Learning. With practical experience as an
+                                Account Service Supervisor at IEnergizer,
+                                I've honed technical prowess and leadership
+                                abilities. I am eager to apply my technical
+                                skills and leadership experience to contribute
+                                effectively in a dynamic work environment.
+                            </p>
+
+                            <!-- <div class="about-btn">
+                        <button class="btn">
+                            Download Resume <i class="uil uil-import"></i>
+                        </button>
+                    </div> -->
+
+                        </div>
+                    </div>
+                    <div class="col">
+
+                        <div class="skills-box">
+                            <div class="skills-header">
+                                <h3>Languages</h3>
+                            </div>
+                            <div class="skills-list">
+                                <span>Python,</span>
+                                <span>C/C++,</span>
+                                <span>JavaScript,</span>
+                                <span>Java,</span>
+                                <span>HTML5,</span>
+                                <span>CSS3,</span>
+                                <span>SQL</span>
+                            </div>
+                        </div>
+
+                        <div class="skills-box">
+                            <div class="skills-header">
+                                <h3>Technical Skills</h3>
+                            </div>
+                            <div class="skills-list">
+                                <span>Data Structures,</span>
+                                <span>Algorithms,</span>
+                                <span>Machine Learning,</span>
+                                <span>BootStrap</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="featured-text-btn">
+                    <button class="btn blue-btn" id="linkedin-btn-II">
+                        View Profile <i class="uil uil-linkedin"></i>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Completed PROJECTS -->
+            <section class="section" id="projects">
+                <div class="top-header">
+                    <h1>
+                        12+ Completed Technical Projects
+                    </h1>
+                </div>
+
+                <div class="project-container">
+
+                    <div class="project-box">
+                        <img src="https://www.python.org/static/community_logos/python-logo-generic.svg"
+                            alt="python logo" class="programming-logo">
+                        <h3>Python</h3>
+                        <label>Web Crawler and Dataset Generator</label>
+                    </div>
+
+                    <div class="project-box">
+                        <img src="https://www.vectorlogo.zone/logos/java/java-horizontal.svg" alt=""
+                            class="programming-logo">
+                        <h3>Java</h3>
+                        <label>Picture Storing Application</label>
+                    </div>
+
+                    <div class="project-box">
+                        <img src="c.svg" alt="" class="programming-logo-cpp">
+                        <h3>C++</h3>
+                        <label>Home Automation System</label>
+                    </div>
+
+                    <div class="featured-text-btn">
+                        <button class="btn blue-btn" id="check-repo-I">
+                            Check repository <i class="uil uil-github-alt"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROJECTS -->
+            <section class="section" id="projects">
+
+                <div class="top-header">
+                    <h1>
+                        Technical Portfolio
+                    </h1>
+                </div>
+
+                <div class="project-container">
+
+                    <div class="project-box">
+                        <i class="uil uil-clipboard-notes"></i>
+                        <h3>Completed</h3>
+                        <label>12+ Finised Projects</label>
+                    </div>
+
+                    <div class="project-box">
+                        <i class="uil uil-robot"></i>
+                        <h3>Developed</h3>
+                        <label>6+ Machine Learning Models</label>
+                    </div>
+
+                    <div class="project-box">
+                        <i class="uil uil-question-circle"></i>
+                        <h3>Solved</h3>
+                        <label>130+ Leet Code Questions</label>
+                    </div>
+                    <div class="featured-text-btn">
+                        <button class="btn blue-btn" id="linkedin-btn-I">
+                            Linkedin <i class="uil uil-linkedin"></i></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTACT -->
+            <section class="section" id="contact">
+                <div class="top-header">
+                    <h1>Get in touch</h1>
+                    <span>Do you have a projectin your mind, contact me</span>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="contact-info">
+                            <h2>Find Me <i class="uil uil-arrow-circle-down"></i></h2>
+                            <p><i class="uil uil-envelopes"></i> Email: amaan3091@gmail.com</p>
+                            <p><i class="uil uil-phone"></i> Phone: +91 9634620272</p>
+                            <p><a class="contact-link" href="https://www.linkedin.com/in/syed-amaan-hasan-497898212/"><i
+                                        class="uil uil-linkedin-alt"></i> linkedin</a></p>
+                            <p><a class="contact-link" href="https://github.com/beckkenstschaft?tab=repositories"><i
+                                        class="uil uil-github"></i> Github</a></p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-control">
+                            <div class="form-inputs">
+                                <input type="text" class="input-field" placeholder="Name">
+                                <input type="text" class="input-field" placeholder="Email">
+                            </div>
+                            <div class="text-area">
+                                <textarea placeholder="Message me"></textarea>
+                            </div>
+                            <div class="form-button">
+                                <button class="btn" onclick="sendEmail()">Send <i class="uil uil-message"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="top-footer">
+                <p>Syed Amaan Hasan</p>
+            </div>
+            <div class="middle-footer">
+                <ul class="footer-menu">
+                    <li class="footer_menu_list">
+                        <a href="#home">Home</a>
+                    </li>
+                    <li class="footer_menu_list">
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="footer_menu_list">
+                        <a href="https://github.com/beckkenstschaft?tab=repositories">Projects</a>
+                    </li>
+                    <li class="footer_menu_list">
+                        <a href="https://www.linkedin.com/in/syed-amaan-hasan-497898212/">Profile</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- <div class="footer-social-icons">
+                <div class="icons"><i class="uil uil-instagram"></i></div>
+                <div class="icons"><i class="uil uil-linkedin-alt"></i></div>
+                <div class="icons"><i class="uil uil-github-alt"></i></div>
+            </div> -->
+            <div class="bottom-footer">
+                <p>Copyright &copy;
+                    <a href="#home" style="text-decoration: none;">
+                        Syed amaan hasan
+                    </a> - All rights reserved
+                </p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
