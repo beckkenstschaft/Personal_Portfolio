@@ -103,7 +103,7 @@ window.addEventListener("scroll", scrollActive);
 // OPEN LINKS
 
 document.getElementById("resume").addEventListener("click", function () {
-  var link = "https://drive.google.com/file/d/10ZwezDkZNcIe5bQz-yn_1PqaT6SRSedh/view?usp=sharing";
+  var link = "https://drive.google.com/file/d/1QdKKRDObTSk5TwLT3ZKcu_7SxiLIMAAs/view?usp=sharing";
   window.open(link, "_blank");
 });
 
