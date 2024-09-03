@@ -56,25 +56,31 @@ sr.reveal(".featured-image", { delay: 300 });
 sr.reveal(".project-box", { interval: 200 });
 sr.reveal(".top-header", {});
 
-const srLeft = ScrollReveal({
-  origin: "left",
-  distance: "80px",
-  duration: 2000,
-  reset: true,
-});
+sr.reveal(".about-info", { delay: 100 });
+sr.reveal(".contact-info", { delay: 100 });
 
-srLeft.reveal(".about-info", { delay: 100 });
-srLeft.reveal(".contact-info", { delay: 100 });
+sr.reveal(".skills-box", { delay: 100 });
+sr.reveal(".form-control", { delay: 100 });
 
-const srRight = ScrollReveal({
-  origin: "right",
-  distance: "80px",
-  duration: 2000,
-  reset: true,
-});
+// const srLeft = ScrollReveal({
+//   origin: "left",
+//   distance: "80px",
+//   duration: 2000,
+//   reset: true,
+// });
 
-srRight.reveal(".skills-box", { delay: 100 });
-srRight.reveal(".form-control", { delay: 100 });
+// srLeft.reveal(".about-info", { delay: 100 });
+// srLeft.reveal(".contact-info", { delay: 100 });
+
+// const srRight = ScrollReveal({
+//   origin: "right",
+//   distance: "80px",
+//   duration: 2000,
+//   reset: true,
+// });
+
+// srRight.reveal(".skills-box", { delay: 100 });
+// srRight.reveal(".form-control", { delay: 100 });
 
 const sections = document.querySelectorAll("section[id]");
 
@@ -101,9 +107,9 @@ function scrollActive() {
 window.addEventListener("scroll", scrollActive);
 
 // OPEN LINKS
-
 document.getElementById("resume").addEventListener("click", function () {
-  var link = "https://drive.google.com/file/d/1QdKKRDObTSk5TwLT3ZKcu_7SxiLIMAAs/view?usp=sharing";
+  var link =
+    "https://drive.google.com/file/d/1QdKKRDObTSk5TwLT3ZKcu_7SxiLIMAAs/view?usp=sharing";
   window.open(link, "_blank");
 });
 
@@ -117,20 +123,24 @@ document.getElementById("check-repo-I").addEventListener("click", function () {
   window.open(link, "_blank");
 });
 
-document.getElementById("linkedin-btn").addEventListener("click", function(){
+document.getElementById("linkedin-btn").addEventListener("click", function () {
   var link = "https://www.linkedin.com/in/syed-amaan-hasan-497898212/";
-  window.open(link,"_blank");
-})
+  window.open(link, "_blank");
+});
 
-document.getElementById("linkedin-btn-I").addEventListener("click", function(){
-  var link = "https://www.linkedin.com/in/syed-amaan-hasan-497898212/";
-  window.open(link,"_blank");
-})
+document
+  .getElementById("linkedin-btn-I")
+  .addEventListener("click", function () {
+    var link = "https://www.linkedin.com/in/syed-amaan-hasan-497898212/";
+    window.open(link, "_blank");
+  });
 
-document.getElementById("linkedin-btn-II").addEventListener("click", function(){
-  var link = "https://www.linkedin.com/in/syed-amaan-hasan-497898212/";
-  window.open(link,"_blank");
-})
+document
+  .getElementById("linkedin-btn-II")
+  .addEventListener("click", function () {
+    var link = "https://www.linkedin.com/in/syed-amaan-hasan-497898212/";
+    window.open(link, "_blank");
+  });
 
 // Scroll TOP BUTTON
 // JavaScript code to show/hide the button based on the scroll position
