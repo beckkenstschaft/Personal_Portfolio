@@ -370,13 +370,12 @@ h3 {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-block: 30px 70px;
+    padding-block: 50px 70px;
     padding-inline: 20px;
     width: 100%;
     background: var(--color-white);
     box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
     border-radius: 20px;
-    padding: 10px;
 }
 
 .about-info p {
