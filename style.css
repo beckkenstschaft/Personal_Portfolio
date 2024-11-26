@@ -370,7 +370,7 @@ h3 {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-block: 50px 70px;
+    padding-block: 50px 100px;
     padding-inline: 20px;
     width: 100%;
     background: var(--color-white);
