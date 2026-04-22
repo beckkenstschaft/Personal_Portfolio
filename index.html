@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="" type="image/x-icon">
     <link rel="icon" href="profile.png" type="image/x-icon">
-    <meta name="theme-color" content="rgb(30, 159, 171)">
+    <meta name="theme-color" content="#00d4aa">
     <title>Portfolio | Syed Amaan Hasan</title>
 
 </head>
@@ -24,37 +24,40 @@
         <!-- HEADER -->
         <nav id="header">
             <div class="nav-logo">
-                <p class="nav-name">Hasan</p>
-                <span>.</span>
+                <p class="nav-name">Syed<span>.</span></p>
             </div>
 
             <div class="nav-menu" id="myNavMenu">
                 <ul class="nav_menu_list">
                     <li class="nav_list">
                         <a href="#home" class="nav-link active-link">Home</a>
-                        <div class="circle"></div>
                     </li>
 
                     <li class="nav_list">
-                        <a href="#about" class="nav-link">about</a>
-                        <div class="circle"></div>
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+
+                    <li class="nav_list">
+                        <a href="#experience" class="nav-link">Experience</a>
+                    </li>
+
+                    <li class="nav_list">
+                        <a href="#education" class="nav-link">Education</a>
                     </li>
 
                     <li class="nav_list">
                         <a href="#projects" class="nav-link">Projects</a>
-                        <div class="circle"></div>
                     </li>
 
                     <li class="nav_list">
                         <a href="#contact" class="nav-link">Contact</a>
-                        <div class="circle"></div>
                     </li>
                 </ul>
             </div>
 
             <div class="nav-button">
-                <button class="btn linkedin-btn"  id="linkedin-btn">
-                    Linkedin <i class="uil uil-linkedin-alt"></i>
+                <button class="btn linkedin-btn" id="linkedin-btn">
+                    LinkedIn <i class="uil uil-linkedin-alt"></i>
                 </button>
             </div>
 
@@ -67,7 +70,7 @@
         <!-- MAIN -->
         <main class="wrapper">
 
-            <!-- FEATURED -->
+            <!-- FEATURED / HOME -->
             <section class="featured-box" id="home">
                 <div class="featured-text">
 
@@ -83,15 +86,15 @@
 
                     <div class="featured-text-info">
                         <p>
-                            Experienced Software Developer with a passion
-                            for developing cutting-edge applications
+                            Passionate Software Developer crafting cutting-edge applications
+                            with expertise in full-stack development and AI/ML solutions.
                         </p>
                     </div>
 
                     <div class="featured-text-btn">
 
                         <button class="btn blue-btn" id="check-repo">
-                            Check repository <i class="uil uil-github-alt"></i>
+                            Projects <i class="uil uil-github-alt"></i>
                         </button>
 
                         <button class="btn" id="resume">
@@ -99,211 +102,277 @@
                         </button>
 
                     </div>
-                    <!-- <div class="social_icons">
-                        <div class="icons">
-                            <i class="uil uil-instagram"></i>
-                        </div>
-                        
-                        <div class="icons">
-                            <i class="uil uil-linkedin-alt" id="linked-in"></i>
-                        </div>
-                        
-                        <div class="icons">
-                            <i class="uil uil-github-alt" id="check-repo-II"></i>
-                        </div>
-                    </div> -->
                 </div>
 
                 <div class="featured-image">
-
-                    <div class="image">
-                        <img src="profile2.png" alt="Profile image">
+                    <div class="doodle-container">
+                        <svg class="doodle-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#00d4aa;stop-opacity:0.8" />
+                                    <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0.8" />
+                                </linearGradient>
+                                <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:0.6" />
+                                    <stop offset="100%" style="stop-color:#00d4aa;stop-opacity:0.6" />
+                                </linearGradient>
+                            </defs>
+                            <circle class="doodle-circle circle-1" cx="200" cy="200" r="120" fill="none" stroke="url(#grad1)" stroke-width="2" stroke-dasharray="10 5"/>
+                            <circle class="doodle-circle circle-2" cx="200" cy="200" r="160" fill="none" stroke="url(#grad2)" stroke-width="1.5" stroke-dasharray="8 8"/>
+                            <circle class="doodle-circle circle-3" cx="200" cy="200" r="180" fill="none" stroke="url(#grad1)" stroke-width="1" stroke-dasharray="5 10"/>
+                            <circle class="doodle-center" cx="200" cy="200" r="80" fill="url(#grad1)" opacity="0.1"/>
+                            <circle class="doodle-center" cx="200" cy="200" r="60" fill="url(#grad2)" opacity="0.1"/>
+                            <g class="doodle-icons">
+                                <rect class="icon-box icon-1" x="60" y="80" width="30" height="30" rx="5" fill="url(#grad1)" opacity="0.8"/>
+                                <text x="75" y="100" font-size="14" fill="white" text-anchor="middle">&lt;/&gt;</text>
+                                <circle class="icon-circle icon-2" cx="340" cy="100" r="20" fill="url(#grad2)" opacity="0.8"/>
+                                <text x="340" y="105" font-size="12" fill="white" text-anchor="middle">AI</text>
+                                <polygon class="icon-poly icon-3" points="340,300 360,340 320,340" fill="url(#grad1)" opacity="0.8"/>
+                                <rect class="icon-rect icon-4" x="50" y="280" width="35" height="25" rx="3" fill="url(#grad2)" opacity="0.8"/>
+                                <circle class="icon-dot dot-1" cx="300" cy="80" r="8" fill="url(#grad1)"/>
+                                <circle class="icon-dot dot-2" cx="100" cy="180" r="6" fill="url(#grad2)"/>
+                                <circle class="icon-dot dot-3" cx="300" cy="320" r="10" fill="url(#grad1)"/>
+                                <circle class="icon-dot dot-4" cx="100" cy="320" r="7" fill="url(#grad2)"/>
+                            </g>
+                            <path class="doodle-path path-1" d="M 80 200 Q 140 150 200 200 Q 260 250 320 200" fill="none" stroke="url(#grad1)" stroke-width="2" opacity="0.5"/>
+                            <path class="doodle-path path-2" d="M 120 140 Q 160 180 200 140 Q 240 100 280 140" fill="none" stroke="url(#grad2)" stroke-width="2" opacity="0.5"/>
+                        </svg>
                     </div>
                 </div>
-
-<!--                 <div class="scroll-icon-box">
-                    <a href="#about" class="scroll-btn">
-                        <i class="uil uil-mouse-alt"></i>
-                        <p>Scroll Down</p>
-                    </a>
-                </div> -->
             </section>
 
             <!-- ABOUT -->
             <section class="section" id="about">
                 <div class="top-header">
                     <h1>About Me</h1>
+                    <span>Discover who I am and what drives my passion for technology</span>
                 </div>
                 <div class="row">
                     <div class="col">
                         <div class="about-info">
-                            <h3>My introduction</h3>
-<!--                             <p>I'm a driven Computer Science and Engineering
-                                student at Graphic Era Deemed University,
-                                equipped with a versatile skill set covering
-                                Python, Java, C/C++, HTML5, CSS3, JavaScript,
-                                Data Structures, Algorithms, and Machine
-                                Learning. With practical experience as an
-                                Account Service Supervisor at IEnergizer,
-                                I've honed my technical prowess and leadership
-                                abilities. I am eager to apply my technical
-                                skills and leadership experience to contribute
-                                effectively in a dynamic work environment.
-                            </p> -->
-                            <p>I'm a driven Computer Science and Engineering student at 
-                                Graphic Era University, proficient in Python, Java, 
-                                C/C++, HTML5, CSS3, JavaScript, Data Structures, Algorithms,
-                                and Machine Learning. With hands-on experience managing 
-                                Salesforce CRM at Frans Global Infotech and developing AI 
-                                models with IBM SkillBuild, I've honed my technical 
-                                expertise and project management skills. I am eager to 
-                                leverage my diverse skill set and practical experience to 
-                                make a meaningful impact in a challenging work environment.
+                            <h3>Get to know me</h3>
+                            <p>I am currently pursuing M.Tech in Artificial Intelligence & Machine Learning 
+                                at BITS Pilani while continuing my professional journey as a Software Engineer. 
+                                Having completed my B.Tech in Computer Science from Graphic Era University with 
+                                a CGPA of 8.26, I bring a strong foundation in full-stack development, AI/ML, 
+                                and prompt engineering. My experience includes building LLM applications at Nvidia, 
+                                developing geospatial solutions at Tula's Institute, and creating scalable web 
+                                applications. I am passionate about leveraging cutting-edge technologies to 
+                                build innovative solutions.
                             </p>
-
-                            <!-- <div class="about-btn">
-                        <button class="btn">
-                            Download Resume <i class="uil uil-import"></i>
-                        </button>
-                    </div> -->
-
                         </div>
                     </div>
                     <div class="col">
-
-                        <div class="skills-box">
-                            <div class="skills-header">
-                                <h3>Languages</h3>
+                        <div class="skills-grid">
+                            <div class="skills-category">
+                                <h3>Programming Languages</h3>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">Java</span>
+                                    <span class="skill-tag">C++</span>
+                                    <span class="skill-tag">C</span>
+                                    <span class="skill-tag">JavaScript</span>
+                                    <span class="skill-tag">SQL</span>
+                                    <span class="skill-tag">PHP</span>
+                                </div>
                             </div>
-                            <div class="skills-list">
-                                <span>Python,</span>
-                                <span>C/C++,</span>
-                                <span>JavaScript,</span>
-                                <span>Java,</span>
-                                <span>HTML5,</span>
-                                <span>CSS3,</span>
-                                <span>SQL</span>
-                                <span>PHP</span>
-                                <span>Node.js</span>
+                            <div class="skills-category">
+                                <h3>Web & Backend</h3>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Node.js</span>
+                                    <span class="skill-tag">Express.js</span>
+                                    <span class="skill-tag">REST APIs</span>
+                                    <span class="skill-tag">HTML5</span>
+                                    <span class="skill-tag">CSS3</span>
+                                    <span class="skill-tag">MongoDB</span>
+                                    <span class="skill-tag">JSON</span>
+                                    <span class="skill-tag">XML</span>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="skills-box">
-                            <div class="skills-header">
-                                <h3>Technical Skills</h3>
+                            <div class="skills-category">
+                                <h3>AI & Data</h3>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Machine Learning</span>
+                                    <span class="skill-tag">NLP</span>
+                                    <span class="skill-tag">Remote Sensing</span>
+                                    <span class="skill-tag">QGIS</span>
+                                    <span class="skill-tag">Google Earth Engine</span>
+                                    <span class="skill-tag">Data Analysis</span>
+                                </div>
                             </div>
-                            <div class="skills-list">
-                                <span>Data Structures,</span>
-                                <span>Algorithms,</span>
-                                <span>Machine Learning,</span>
-                                <span>BootStrap</span>
-                                <span>CRM Administration</span>
-                                <span>Database Administration</span>
-                                <span>Software Development</span>
-                                <span>Data Analysis</span>
-                                <span>Web Development</span>
+                            <div class="skills-category">
+                                <h3>Developer Tools</h3>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Git</span>
+                                    <span class="skill-tag">GitHub</span>
+                                    <span class="skill-tag">Postman</span>
+                                    <span class="skill-tag">Jupyter Notebook</span>
+                                    <span class="skill-tag">IntelliJ</span>
+                                    <span class="skill-tag">VS Code</span>
+                                    <span class="skill-tag">Android Studio</span>
+                                    <span class="skill-tag">MySQL Workbench</span>
+                                    <span class="skill-tag">AWS</span>
+                                    <span class="skill-tag">Power BI</span>
+                                    <span class="skill-tag">Excel</span>
+                                </div>
+                            </div>
+                            <div class="skills-category" style="grid-column: 1 / -1;">
+                                <h3>Certifications</h3>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">AWS Cloud Practitioner</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <br>
-                <div class="featured-text-btn">
-                    <button class="btn blue-btn" id="linkedin-btn-II">
-                        View Profile <i class="uil uil-linkedin"></i>
-                    </button>
                 </div>
             </section>
 
-            <!-- Completed PROJECTS -->
-            <section class="section" id="projects">
+            <!-- EXPERIENCE -->
+            <section class="section" id="experience">
                 <div class="top-header">
-                    <h1>
-                        17+ Completed Technical Projects
-                    </h1>
+                    <h1>Work Experience</h1>
+                    <span>My professional journey and contributions</span>
                 </div>
-
-                <div class="project-container">
-
-                    <div class="project-box">
-                        <img src="https://www.python.org/static/community_logos/python-logo-generic.svg"
-                            alt="python logo" class="programming-logo">
-                        <h3>Python</h3>
-                        <label>Resume Screening Web Application</label>
+                <div class="card-grid">
+                    <div class="card-box">
+                        <div class="card-icon">
+                            <i class="uil uil-robot"></i>
+                        </div>
+                        <h4>Associate Prompt Engineer</h4>
+                        <h5>Nvidia</h5>
+                        <span class="card-date">Jan 2026 - Mar 2026</span>
+                        <p>Designed and optimized 500+ structured prompts for conversational and multimodal LLM systems, improving response consistency. Performed evaluation and ranking of LLM outputs to detect hallucinations, bias, and reasoning gaps. Generated high-quality training and evaluation datasets for human-in-the-loop AI pipelines.</p>
                     </div>
-
-                    <div class="project-box">
-                        <img src="https://www.vectorlogo.zone/logos/java/java-horizontal.svg" alt=""
-                            class="programming-logo">
-                        <h3>Java</h3>
-                        <label>Picture Storing Application</label>
+                    <div class="card-box">
+                        <div class="card-icon">
+                            <i class="uil uil-laptop-cloud"></i>
+                        </div>
+                        <h4>Research Software Engineer</h4>
+                        <h5>Tula's Institute, Dehradun</h5>
+                        <span class="card-date">Feb 2025 - Jan 2026</span>
+                        <p>Led R&D for Uttarakhand government projects (via UCOST), developing ML models, geospatial analytics pipelines, and backend systems. Built remote sensing workflows using QGIS and Google Earth Engine. Developed scalable backend modules in Java and Python for automation.</p>
                     </div>
-
-                    <div class="project-box">
-                        <img src="mern_logo.png" alt="" class="programming-logo-cpp">
-                        <h3>MERN Stack</h3>
-                        <label>ATS Scanner and AI Assistant</label>
+                    <div class="card-box">
+                        <div class="card-icon">
+                            <i class="uil uil-cloud"></i>
+                        </div>
+                        <h4>Salesforce CRM Administrator</h4>
+                        <h5>Frans Global Infotech</h5>
+                        <span class="card-date">Jan 2024 - Jun 2024</span>
+                        <p>Managed Salesforce CRM, optimized workflows, and created automated solutions. 
+                           Enhanced team productivity through streamlined business processes.</p>
                     </div>
+                </div>
+            </section>
 
-                    <div class="featured-text-btn">
-                        <button class="btn blue-btn" id="check-repo-I">
-                            Check repository <i class="uil uil-github-alt"></i>
-                        </button>
+            <!-- EDUCATION -->
+            <section class="section" id="education">
+                <div class="top-header">
+                    <h1>Education</h1>
+                    <span>Academic background and qualifications</span>
+                </div>
+                <div class="card-grid">
+                    <div class="card-box">
+                        <div class="card-icon">
+                            <i class="uil uil-graduation-cap"></i>
+                        </div>
+                        <h4>M.Tech - AI & Machine Learning</h4>
+                        <h5>Birla Institute of Technology and Science (BITS)</h5>
+                        <span class="card-date">Jan 2026 - Present</span>
+                        <p>Pursuing advanced studies in Artificial Intelligence and Machine Learning with focus on deep learning, NLP, and intelligent systems.</p>
+                    </div>
+                    <div class="card-box">
+                        <div class="card-icon">
+                            <i class="uil uil-graduation-cap"></i>
+                        </div>
+                        <h4>B.Tech - Computer Science</h4>
+                        <h5>Graphic Era University</h5>
+                        <span class="card-date">Sept 2021 - June 2025</span>
+                        <p>CGPA: 8.26/10.0 - Comprehensive knowledge in software development, algorithms, data structures, and machine learning fundamentals.</p>
                     </div>
                 </div>
             </section>
 
             <!-- PROJECTS -->
             <section class="section" id="projects">
-
                 <div class="top-header">
-                    <h1>
-                        Technical Portfolio
-                    </h1>
+                    <h1>Featured Projects</h1>
+                    <span>Key repositories from my GitHub</span>
                 </div>
 
                 <div class="project-container">
 
-                    <div class="project-box">
-                        <i class="uil uil-clipboard-notes"></i>
-                        <h3>Completed</h3>
-                        <label>17+ Finised Projects</label>
+                    <div class="project-box" onclick="window.open('https://github.com/beckkenstschaft/Full-Stack-ATS-Resume-Tracker', '_blank')">
+                        <i class="uil uil-list-ul"></i>
+                        <h3>ATS Resume Tracker</h3>
+                        <div class="tech-stack">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS">
+                        </div>
                     </div>
 
-                    <div class="project-box">
-                        <i class="uil uil-robot"></i>
-                        <h3>Developed</h3>
-                        <label>8+ Machine Learning Models</label>
+                    <div class="project-box" onclick="window.open('https://github.com/beckkenstschaft/Full-Stack_File_Sharing_Application', '_blank')">
+                        <i class="uil uil-file-share-alt"></i>
+                        <h3>File Sharing Application</h3>
+                        <div class="tech-stack">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                        </div>
                     </div>
 
-                    <div class="project-box">
-                        <i class="uil uil-question-circle"></i>
-                        <h3>Solved</h3>
-                        <label>133+ Leet Code Questions</label>
+                    <div class="project-box" onclick="window.open('https://github.com/beckkenstschaft/Online_Learning_Management_System', '_blank')">
+                        <i class="uil uil-book-alt"></i>
+                        <h3>Learning Management System</h3>
+                        <div class="tech-stack">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                        </div>
                     </div>
-                    <div class="featured-text-btn">
-                        <button class="btn blue-btn" id="linkedin-btn-I">
-                            Linkedin <i class="uil uil-linkedin"></i></i>
-                        </button>
+
+                    <div class="project-box" onclick="window.open('https://github.com/beckkenstschaft/Climate-Change-Data-Analysis', '_blank')">
+                        <i class="uil uil-cloud"></i>
+                        <h3>Climate Change Analysis</h3>
+                        <div class="tech-stack">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="Jupyter">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                        </div>
                     </div>
+
+                    <div class="project-box" onclick="window.open('https://github.com/beckkenstschaft/Airline_Tweet_Sentiment_Analyzer_Web_Application', '_blank')">
+                        <i class="uil uil-twitter"></i>
+                        <h3>Tweet Sentiment Analyzer</h3>
+                        <div class="tech-stack">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="featured-text-btn" style="justify-content: center; margin-top: 40px;">
+                    <button class="btn blue-btn" id="check-repo-I">
+                        View All Projects <i class="uil uil-github-alt"></i>
+                    </button>
                 </div>
             </section>
 
             <!-- CONTACT -->
             <section class="section" id="contact">
                 <div class="top-header">
-                    <h1>Get in touch</h1>
-                    <span>Do you have a project in your mind, contact me</span>
+                    <h1>Get In Touch</h1>
+                    <span>Have a project in mind? Let's connect.</span>
                 </div>
                 <div class="row">
                     <div class="col">
                         <div class="contact-info">
-                            <h2>Find Me <i class="uil uil-arrow-circle-down"></i></h2>
-                            <p><i class="uil uil-envelopes"></i> Email: amaan3091@gmail.com</p>
-                            <p><i class="uil uil-phone"></i> Phone: +91 9634620272</p>
+                            <h2>Contact Info</h2>
+                            <p><i class="uil uil-envelopes"></i> amaan3091@gmail.com</p>
+                            <p><i class="uil uil-phone"></i> +91 9634620272</p>
                             <p><a class="contact-link" href="https://www.linkedin.com/in/syed-amaan-hasan-497898212/"><i
-                                        class="uil uil-linkedin-alt"></i> linkedin</a></p>
+                                        class="uil uil-linkedin-alt"></i> LinkedIn</a></p>
                             <p><a class="contact-link" href="https://github.com/beckkenstschaft?tab=repositories"><i
-                                        class="uil uil-github"></i> Github</a></p>
+                                        class="uil uil-github"></i> GitHub</a></p>
                         </div>
                     </div>
                     <div class="col">
@@ -313,10 +382,10 @@
                                 <input type="text" class="input-field" placeholder="Email">
                             </div>
                             <div class="text-area">
-                                <textarea placeholder="Message me"></textarea>
+                                <textarea placeholder="Your message"></textarea>
                             </div>
                             <div class="form-button">
-                                <button class="btn" onclick="sendEmail()">Send <i class="uil uil-message"></i></button>
+                                <button class="btn">Send Message <i class="uil uil-message"></i></button>
                             </div>
                         </div>
                     </div>
@@ -331,32 +400,17 @@
                 <p>Syed Amaan Hasan</p>
             </div>
             <div class="middle-footer">
-                <ul class="footer-menu">
-                    <li class="footer_menu_list">
-                        <a href="#home">Home</a>
-                    </li>
-                    <li class="footer_menu_list">
-                        <a href="#about">About</a>
-                    </li>
-                    <li class="footer_menu_list">
-                        <a href="https://github.com/beckkenstschaft?tab=repositories">Projects</a>
-                    </li>
-                    <li class="footer_menu_list">
-                        <a href="https://www.linkedin.com/in/syed-amaan-hasan-497898212/">Profile</a>
-                    </li>
+                <ul class="footer_menu_list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
-            <!-- <div class="footer-social-icons">
-                <div class="icons"><i class="uil uil-instagram"></i></div>
-                <div class="icons"><i class="uil uil-linkedin-alt"></i></div>
-                <div class="icons"><i class="uil uil-github-alt"></i></div>
-            </div> -->
             <div class="bottom-footer">
-                <p>Copyright &copy;
-                    <a href="#home" style="text-decoration: none;">
-                        Syed amaan hasan
-                    </a> - All rights reserved
-                </p>
+                <p>Copyright &copy; <a href="#home">Syed Amaan Hasan</a> - All rights reserved</p>
             </div>
         </footer>
 
