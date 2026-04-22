@@ -59,7 +59,7 @@ body {
     width: 100%;
     position: relative;
     background: var(--body-color);
-    overflow-x: hidden;
+    overflow-x: visible;
 }
 
 body::before {
@@ -278,6 +278,8 @@ nav {
     width: 45%;
     position: relative;
 }
+
+
 
 .doodle-container {
     width: 380px;
@@ -800,28 +802,81 @@ footer {
 }
 
 #scrollTopButton {
-    display: none;
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: var(--accent-gradient);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    position: fixed !important;
+    bottom: 30px !important;
+    right: 30px !important;
+    background: rgba(0, 212, 170, 0.15) !important;
+    border: 2px solid #00d4aa !important;
+    border-radius: 50% !important;
+    width: 50px !important;
+    height: 50px !important;
     cursor: pointer;
-    font-size: 14px;
-    z-index: 999;
-    box-shadow: 0 10px 25px var(--accent-glow);
-    transition: all 0.3s ease;
+    z-index: 9999 !important;
+    display: none;
+}
+
+#scrollTopButton.visible {
+    display: flex !important;
     align-items: center;
     justify-content: center;
+    animation: scrollBtnAppear 0.4s ease-out, scrollBtnFloat 3s ease-in-out infinite 0.4s;
+}
+
+#scrollTopButton i {
+    font-size: 22px;
+    color: #00d4aa;
+    animation: arrowBounce 2s ease-in-out infinite;
 }
 
 #scrollTopButton:hover {
-    transform: translateY(-3px) scale(1.1);
-    box-shadow: 0 15px 35px var(--accent-glow);
+    background: #00d4aa !important;
+    transform: scale(1.15);
+    box-shadow: 0 0 30px rgba(0, 212, 170, 0.8);
+    animation: scrollBtnHover 0.3s ease-out forwards;
+}
+
+#scrollTopButton:hover i {
+    color: #fff !important;
+}
+
+@keyframes scrollBtnAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes scrollBtnFloat {
+    0%, 100% {
+        transform: translateY(0);
+        box-shadow: 0 0 20px rgba(0, 212, 170, 0.4);
+    }
+    50% {
+        transform: translateY(-8px);
+        box-shadow: 0 0 30px rgba(0, 212, 170, 0.6);
+    }
+}
+
+@keyframes arrowBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+@keyframes scrollBtnHover {
+    0% {
+        box-shadow: 0 0 20px rgba(0, 212, 170, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 30px rgba(0, 212, 170, 0.8);
+    }
 }
 
 .card-section {

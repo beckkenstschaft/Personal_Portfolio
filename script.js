@@ -9,14 +9,14 @@ function myMenuFunction() {
   }
 }
 
-// ADD SHADOW ON NAVIGATION BAR
-window.onscroll = function () {
+// SCROLL HANDLERS
+window.addEventListener('scroll', function() {
   headerShadow();
-};
+  showScrollButton();
+});
 
 function headerShadow() {
   const navHeader = document.getElementById("header");
-
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     navHeader.style.boxShadow = "0 1px 6px rgba(0, 0, 0, 0.1)";
     navHeader.style.height = "70px";
@@ -27,8 +27,6 @@ function headerShadow() {
     navHeader.style.lineHeight = "80px";
   }
 }
-
-// TYPING EFFECT
 var typingEffect = new Typed(".typedtext", {
   strings: ["Developer", "Engineer", "Lecturer", "Researcher"],
   loop: true,
@@ -130,19 +128,24 @@ document.getElementById("linkedin-btn-I").addEventListener("click", function () 
 });
 
 // Scroll to Top Button
-window.onscroll = function () {
+function showScrollButton() {
   var button = document.getElementById("scrollTopButton");
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    button.style.display = "flex";
-  } else {
-    button.style.display = "none";
+  if (button) {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      button.classList.add("visible");
+    } else {
+      button.classList.remove("visible");
+    }
   }
-};
+}
 
 function scrollToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+// Check on load
+document.addEventListener('DOMContentLoaded', showScrollButton);
 
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -164,19 +167,10 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Parallax effect for doodle
-let ticking = false;
+// Mouse move handler for doodle parallax
 document.addEventListener('mousemove', (e) => {
-  if (ticking) return;
-  ticking = true;
-  
-  requestAnimationFrame(() => {
-    const doodleContainer = document.querySelector('.doodle-container');
-    if (!doodleContainer) {
-      ticking = false;
-      return;
-    }
-    
+  const doodleContainer = document.querySelector('.doodle-container');
+  if (doodleContainer) {
     const rect = doodleContainer.getBoundingClientRect();
     const centerX = rect.left + rect.width / 2;
     const centerY = rect.top + rect.height / 2;
@@ -206,7 +200,5 @@ document.addEventListener('mousemove', (e) => {
       const factor = index % 2 === 0 ? 0.6 : 0.8;
       path.style.transform = `translate(${deltaX * factor}px, ${deltaY * factor}px)`;
     });
-    
-    ticking = false;
-  });
+  }
 });
