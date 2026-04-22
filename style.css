@@ -288,6 +288,130 @@ nav {
     animation: fadeIn 1s ease-out 0.8s both;
 }
 
+.ghost-container {
+    width: 320px;
+    height: 400px;
+    position: relative;
+    animation: fadeIn 1s ease-out 0.8s both;
+    animation: ghostFloat 4s ease-in-out infinite;
+}
+
+.ghost-svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.ghost-body {
+    animation: ghostWobble 3s ease-in-out infinite;
+}
+
+.eye {
+    transition: all 0.2s ease;
+}
+
+.eye-shine {
+    animation: eyeBlink 4s ease-in-out infinite;
+}
+
+.mouth {
+    animation: none;
+}
+
+.phone-body {
+    display: none;
+}
+
+.phone-screen-content {
+    display: none;
+}
+
+.coffee-cup {
+    animation: cupSteam 2s ease-in-out infinite;
+}
+
+.steam {
+    animation: steamRise 2s ease-in-out infinite;
+}
+
+.steam-1 {
+    animation-delay: 0s;
+}
+
+.steam-2 {
+    animation-delay: 0.3s;
+}
+
+.steam-3 {
+    animation-delay: 0.6s;
+}
+
+@keyframes steamRise {
+    0% { opacity: 0.6; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-20px); }
+}
+
+@keyframes cupSteam {
+    0%, 100% { }
+    50% { transform: translateY(-2px); }
+}
+
+.speaker-bubble {
+    position: absolute;
+    top: 0;
+    right: -10px;
+    background: var(--color-white);
+    padding: 12px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    animation: bubblePop 0.5s ease-out 2.5s both;
+    z-index: 10;
+    opacity: 1;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.speaker-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    border-width: 10px 10px 0;
+    border-style: solid;
+    border-color: var(--color-white) transparent transparent;
+}
+
+.speaker-bubble.hidden {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.bubble-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.cursor-ghost {
+    position: fixed;
+    width: 60px;
+    height: 75px;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    transform: translate(-50%, -50%);
+}
+
+.cursor-ghost.visible {
+    opacity: 0.85;
+    animation: cursorGhostFloat 1s ease-in-out infinite;
+}
+
+.cursor-ghost-svg {
+    width: 100%;
+    height: 100%;
+}
+
 .doodle-svg {
     width: 100%;
     height: 100%;
@@ -396,6 +520,49 @@ nav {
 @keyframes wavePath {
     0%, 100% { d: path("M 80 200 Q 140 150 200 200 Q 260 250 320 200"); }
     50% { d: path("M 80 200 Q 140 220 200 200 Q 260 180 320 200"); }
+}
+
+@keyframes ghostFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes ghostWobble {
+    0%, 100% { transform: scaleX(1) skewX(0deg); }
+    25% { transform: scaleX(1.02) skewX(-2deg); }
+    75% { transform: scaleX(1.02) skewX(2deg); }
+}
+
+@keyframes eyeBlink {
+    0%, 90%, 100% { transform: scaleY(1); }
+    95% { transform: scaleY(0.1); }
+}
+
+@keyframes mouthTalk {
+    0%, 100% { transform: scaleY(1); }
+    50% { transform: scaleY(1.3); }
+}
+
+@keyframes phoneTilt {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+}
+
+@keyframes screenScroll {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+@keyframes bubblePop {
+    0% { transform: scale(0); opacity: 0; }
+    60% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes cursorGhostFloat {
+    0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+    50% { transform: translate(-50%, -50%) translateY(-8px); }
 }
 
 @media (prefers-reduced-motion: reduce) {

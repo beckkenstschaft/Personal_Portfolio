@@ -20,7 +20,7 @@
         <!-- HEADER -->
         <nav id="header">
             <div class="nav-logo">
-                <p class="nav-name">Syed<span>.</span></p>
+                <p class="nav-name">Amaan<span>.</span></p>
             </div>
 
             <div class="nav-menu" id="myNavMenu">
@@ -101,37 +101,46 @@
                 </div>
 
                 <div class="featured-image">
-                    <div class="doodle-container">
-                        <svg class="doodle-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <div class="ghost-container" id="homeGhost">
+                        <div class="speaker-bubble">
+                            <span class="bubble-text">Hello there!</span>
+                        </div>
+                        <svg class="ghost-svg" viewBox="0 0 200 250" xmlns="http://www.w3.org/2000/svg">
                             <defs>
-                                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#00d4aa;stop-opacity:0.8" />
-                                    <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0.8" />
+                                <linearGradient id="ghostGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.95" />
+                                    <stop offset="100%" style="stop-color:#e8e8e8;stop-opacity:0.9" />
                                 </linearGradient>
-                                <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:0.6" />
-                                    <stop offset="100%" style="stop-color:#00d4aa;stop-opacity:0.6" />
-                                </linearGradient>
+                                <filter id="glow">
+                                    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                                    <feMerge>
+                                        <feMergeNode in="coloredBlur"/>
+                                        <feMergeNode in="SourceGraphic"/>
+                                    </feMerge>
+                                </filter>
                             </defs>
-                            <circle class="doodle-circle circle-1" cx="200" cy="200" r="120" fill="none" stroke="url(#grad1)" stroke-width="2" stroke-dasharray="10 5"/>
-                            <circle class="doodle-circle circle-2" cx="200" cy="200" r="160" fill="none" stroke="url(#grad2)" stroke-width="1.5" stroke-dasharray="8 8"/>
-                            <circle class="doodle-circle circle-3" cx="200" cy="200" r="180" fill="none" stroke="url(#grad1)" stroke-width="1" stroke-dasharray="5 10"/>
-                            <circle class="doodle-center" cx="200" cy="200" r="80" fill="url(#grad1)" opacity="0.1"/>
-                            <circle class="doodle-center" cx="200" cy="200" r="60" fill="url(#grad2)" opacity="0.1"/>
-                            <g class="doodle-icons">
-                                <rect class="icon-box icon-1" x="60" y="80" width="30" height="30" rx="5" fill="url(#grad1)" opacity="0.8"/>
-                                <text x="75" y="100" font-size="14" fill="white" text-anchor="middle">&lt;/&gt;</text>
-                                <circle class="icon-circle icon-2" cx="340" cy="100" r="20" fill="url(#grad2)" opacity="0.8"/>
-                                <text x="340" y="105" font-size="12" fill="white" text-anchor="middle">AI</text>
-                                <polygon class="icon-poly icon-3" points="340,300 360,340 320,340" fill="url(#grad1)" opacity="0.8"/>
-                                <rect class="icon-rect icon-4" x="50" y="280" width="35" height="25" rx="3" fill="url(#grad2)" opacity="0.8"/>
-                                <circle class="icon-dot dot-1" cx="300" cy="80" r="8" fill="url(#grad1)"/>
-                                <circle class="icon-dot dot-2" cx="100" cy="180" r="6" fill="url(#grad2)"/>
-                                <circle class="icon-dot dot-3" cx="300" cy="320" r="10" fill="url(#grad1)"/>
-                                <circle class="icon-dot dot-4" cx="100" cy="320" r="7" fill="url(#grad2)"/>
+                            <path class="ghost-body" d="M30 80 Q30 30 100 30 Q170 30 170 80 L170 180 Q160 220 145 200 Q130 230 115 200 Q100 230 85 200 Q70 230 55 200 Q40 220 30 180 Z" fill="url(#ghostGrad)" filter="url(#glow)"/>
+                            <ellipse class="ghost-face" cx="100" cy="90" rx="55" ry="50" fill="#ffffff" opacity="0.3"/>
+                            <circle class="eye left-eye" cx="75" cy="85" r="12" fill="#1a1a1a"/>
+                            <circle class="eye right-eye" cx="125" cy="85" r="12" fill="#1a1a1a"/>
+                            <circle class="eye-shine" cx="79" cy="81" r="4" fill="#ffffff"/>
+                            <circle class="eye-shine" cx="129" cy="81" r="4" fill="#ffffff"/>
+                            <ellipse class="mouth" cx="100" cy="115" rx="18" ry="8" fill="#1a1a1a"/>
+                            <path class="blush left-blush" d="M45 105 Q55 100 65 105 Q55 115 45 105" fill="#ffb6c1" opacity="0.5"/>
+                            <path class="blush right-blush" d="M135 105 Q145 100 155 105 Q145 115 135 105" fill="#ffb6c1" opacity="0.5"/>
+                            <g class="coffee-cup">
+                                <ellipse class="cup-body" cx="145" cy="175" rx="20" ry="15" fill="#ffffff"/>
+                                <path class="cup-side" d="M125 160 L125 175 Q125 190 145 190 Q165 190 165 175 L165 160" fill="#ffffff"/>
+                                <ellipse class="cup-top" cx="145" cy="160" rx="20" ry="8" fill="#ffffff"/>
+                                <ellipse class="coffee-inside" cx="145" cy="160" rx="16" ry="6" fill="#3d2314"/>
+                                <path class="steam steam-1" d="M135 145 Q135 135 140 130" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.6"/>
+                                <path class="steam steam-2" d="M145 145 Q145 130 150 125" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.6"/>
+                                <path class="steam steam-3" d="M155 145 Q155 135 160 130" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.6"/>
+                                <path class="cup-handle" d="M165 165 Q178 165 178 175 Q178 185 165 185" fill="none" stroke="#ffffff" stroke-width="4"/>
                             </g>
-                            <path class="doodle-path path-1" d="M 80 200 Q 140 150 200 200 Q 260 250 320 200" fill="none" stroke="url(#grad1)" stroke-width="2" opacity="0.5"/>
-                            <path class="doodle-path path-2" d="M 120 140 Q 160 180 200 140 Q 240 100 280 140" fill="none" stroke="url(#grad2)" stroke-width="2" opacity="0.5"/>
+                            <g class="ghost-arm" id="ghostArm">
+                                <path class="arm" d="M45 130 Q30 120 25 100 Q20 85 35 75" fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round"/>
+                            </g>
                         </svg>
                     </div>
                 </div>
@@ -147,14 +156,31 @@
                     <div class="col">
                         <div class="about-info">
                             <h3>Get to know me</h3>
-                            <p>I am currently pursuing M.Tech in Artificial Intelligence & Machine Learning 
-                                at BITS Pilani while continuing my professional journey as a Software Engineer. 
-                                Having completed my B.Tech in Computer Science from Graphic Era University with 
-                                a CGPA of 8.26, I bring a strong foundation in full-stack development, AI/ML, 
-                                and prompt engineering. My experience includes building LLM applications at Nvidia, 
-                                developing geospatial solutions at Tula's Institute, and creating scalable web 
-                                applications. I am passionate about leveraging cutting-edge technologies to 
-                                build innovative solutions.
+                            <p>I am Syed Amaan Hasan currently pursuing M-Tech student in 
+                                Artificial Intelligence and Machine Learning at Birla 
+                                Institute of Technology and Science and a recent B-Tech 
+                                Computer Science and Engineering graduate from Graphic 
+                                Era University. Currently working as an Associate Prompt 
+                                Engineer at Nvidia, I design and optimize large-scale prompt 
+                                pipelines for conversational and multimodal LLM systems. 
+                                I have developed and evaluated 500+ structured prompts, 
+                                performed hallucination and bias analysis, and contributed 
+                                to high-quality training datasets that enhance model 
+                                reliability and performance.
+
+                                Previously, as a Research Software Engineer at Tula's 
+                                Institute, I led R&D initiatives for Uttarakhand government 
+                                projects under Uttarakhand State Council for Science and 
+                                Technology. My work involved building machine learning models, 
+                                developing geospatial analytics pipelines using QGIS and Google 
+                                Earth Engine, and creating scalable backend systems in Java 
+                                and Python.
+
+                                I enjoy building end-to-end solutions, including full-stack 
+                                applications like an ATS Resume Tracker and a File Sharing 
+                                Platform. Passionate about applied AI, NLP, and backend 
+                                engineering, I focus on creating practical, scalable, and 
+                                impactful technology solutions.
                             </p>
                         </div>
                     </div>
@@ -363,7 +389,7 @@
                     <div class="col">
                         <div class="contact-info">
                             <h2>Contact Info</h2>
-                            <p><i class="uil uil-envelopes"></i> amaan3091@gmail.com</p>
+                            <p><i class="uil uil-envelopes"></i> hasansyedamaan@gmail.com</p>
                             <p><i class="uil uil-phone"></i> +91 9634620272</p>
                             <p><a class="contact-link" href="https://www.linkedin.com/in/syed-amaan-hasan-497898212/"><i
                                         class="uil uil-linkedin-alt"></i> LinkedIn</a></p>
@@ -415,6 +441,21 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="script.js"></script>
+
+    <div class="cursor-ghost" id="cursorGhost">
+        <svg class="cursor-ghost-svg" viewBox="0 0 80 100" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="cursorGhostGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.9" />
+                    <stop offset="100%" style="stop-color:#e0e0e0;stop-opacity:0.85" />
+                </linearGradient>
+            </defs>
+            <path class="cg-body" d="M10 30 Q10 5 40 5 Q70 5 70 30 L70 75 Q60 90 50 80 Q40 95 30 80 Q20 90 10 75 Z" fill="url(#cursorGhostGrad)"/>
+            <circle class="cg-eye" cx="28" cy="32" r="5" fill="#1a1a1a"/>
+            <circle class="cg-eye" cx="52" cy="32" r="5" fill="#1a1a1a"/>
+            <ellipse class="cg-mouth" cx="40" cy="48" rx="6" ry="3" fill="#1a1a1a"/>
+        </svg>
+    </div>
 
     <button id="scrollTopButton" onclick="scrollToTop()">
         <i class="uil uil-arrow-up"></i>

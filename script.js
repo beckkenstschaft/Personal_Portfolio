@@ -167,38 +167,65 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Mouse move handler for doodle parallax
-document.addEventListener('mousemove', (e) => {
-  const doodleContainer = document.querySelector('.doodle-container');
-  if (doodleContainer) {
-    const rect = doodleContainer.getBoundingClientRect();
-    const centerX = rect.left + rect.width / 2;
-    const centerY = rect.top + rect.height / 2;
-    
-    const deltaX = (e.clientX - centerX) / 40;
-    const deltaY = (e.clientY - centerY) / 40;
-    
-    const circles = document.querySelectorAll('.doodle-circle');
-    circles.forEach((circle, index) => {
-      const factor = (index + 1) * 0.4;
-      circle.style.transform = `translate(${deltaX * factor}px, ${deltaY * factor}px)`;
-    });
-    
-    const icons = document.querySelector('.doodle-icons');
-    if (icons) {
-      icons.style.transform = `translate(${-deltaX * 1.2}px, ${-deltaY * 1.2}px)`;
+// Cursor ghost - follows mouse when scrolled past home
+const cursorGhost = document.getElementById('cursorGhost');
+const homeGhost = document.getElementById('homeGhost');
+const homeSection = document.getElementById('home');
+const speechBubble = document.querySelector('.speaker-bubble');
+let ghostVisible = false;
+let mouseX = 0, mouseY = 0;
+let ghostX = 0, ghostY = 0;
+
+// Hide speech bubble after wave animation completes (~4s)
+setTimeout(() => {
+    if (speechBubble) {
+        speechBubble.classList.add('hidden');
     }
-    
-    const dots = document.querySelectorAll('.icon-dot');
-    dots.forEach((dot, index) => {
-      const factor = index % 2 === 0 ? 1.8 : 1.4;
-      dot.style.transform = `translate(${deltaX * factor}px, ${deltaY * factor}px)`;
-    });
-    
-    const paths = document.querySelectorAll('.doodle-path');
-    paths.forEach((path, index) => {
-      const factor = index % 2 === 0 ? 0.6 : 0.8;
-      path.style.transform = `translate(${deltaX * factor}px, ${deltaY * factor}px)`;
-    });
+}, 4500);
+
+// Track mouse position
+document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+});
+
+// Smooth ghost following loop
+function animateGhost() {
+    if (ghostVisible && cursorGhost) {
+        // Smooth interpolation (lerp) for following
+        ghostX += (mouseX - ghostX) * 0.08;
+        ghostY += (mouseY - ghostY) * 0.08;
+        
+        cursorGhost.style.left = ghostX + 'px';
+        cursorGhost.style.top = ghostY + 'px';
+    }
+    requestAnimationFrame(animateGhost);
+}
+animateGhost();
+
+document.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+  const homeBottom = homeSection ? homeSection.offsetHeight : 0;
+  
+  if (scrollY > homeBottom * 0.5) {
+    if (!ghostVisible && cursorGhost) {
+      cursorGhost.classList.add('visible');
+      // Initialize position to current mouse position to prevent jumping
+      ghostX = mouseX;
+      ghostY = mouseY;
+      ghostVisible = true;
+    }
+    if (homeGhost) {
+      homeGhost.style.opacity = '0';
+      homeGhost.style.transition = 'opacity 0.3s ease';
+    }
+  } else {
+    if (ghostVisible && cursorGhost) {
+      cursorGhost.classList.remove('visible');
+      ghostVisible = false;
+    }
+    if (homeGhost) {
+      homeGhost.style.opacity = '1';
+    }
   }
 });
